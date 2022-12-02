@@ -1,4 +1,3 @@
-
 SELECT * FROM Organization
 
 SELECT Name FROM Organization
