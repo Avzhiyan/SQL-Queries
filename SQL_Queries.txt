@@ -1,0 +1,28 @@
+
+SELECT * FROM Organization
+
+SELECT Name FROM Organization
+
+SELECT DISTINCT City FROM Organization
+
+SELECT DISTINCT City FROM Organization ORDER BY City ASC
+
+SELECT City FROM Organization ORDER BY Name DESC
+
+SELECT Name FROM Organization WHERE Small_Name='003'
+
+SELECT Name FROM Organization WHERE Small_Name IN ('003', '002') 
+
+SELECT * FROM Organization WHERE City=NULL
+
+SELECT SUM (NSerial) FROM BalanceDeltas
+
+SELECT MIN (Nserial) FROM BalanceDeltas
+
+SELECT MAX (Nserial) FROM BalanceDeltas
+
+SELECT * FROM Received LEFT OUTER JOIN BalanceDeltas ON Received.BalanceDeltasId = BalanceDeltas.id
+
+SELECT * FROM Received FULL OUTER JOIN BalanceDeltas ON Received.BalanceDeltasId = BalanceDeltas.id
+
+SELECT Received.BalanceDeltasId, BalanceDeltas.id FROM Received INNER JOIN BalanceDeltas ON Received.BalanceDeltasId = BalanceDeltas.id
